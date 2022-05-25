@@ -2,26 +2,79 @@ import React from "react";
 
 const BussinessSummary = () => {
   return (
-    <div class="card lg:card-side bg-base-100 shadow-xl mx-10 mt-20">
-      <figure>
-        <img
-          src="https://cdn.pixabay.com/photo/2016/06/03/13/57/digital-marketing-1433427_960_720.jpg"
-          className="w-3/4 rounded"
-          alt="Album"
-        />
-      </figure>
-      <div class="card-body w-3/4">
-        <h2 class="card-title">Bussiness Summary</h2>
-        <p>
-          <h2 className="font-bold text-xl">Our Mission</h2> <br /> Part-T-ake.
-          offers superior on-site computer parts sitting and exercising services
-          for your computer, providing the good service and machanic . Our team
-          will ensure that best parts and desing for your computer. <br />{" "}
-          <br />
-          <h2 className="font-bold text-xl">Our Services</h2> <br />
-          Ensure best parst and service. <br /> Providing the home delivery
-          service.
-        </p>
+    <div>
+      <h2 class=" text-white text-5xl font-bold mt-5 text-center">
+        Bussiness Summary
+      </h2>
+      <div class="card lg:card-side bg-base-100 shadow-xl mx-5 mt-5">
+        <div class="stats shadow ">
+          <div class="stat ">
+            <div class="stat-figure text-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block w-8 h-8 stroke-current"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </div>
+            <div class="stat-title">Total Likes</div>
+            <div class="stat-value text-primary">25.6K</div>
+            <div class="stat-desc">21% more than last month</div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-figure text-secondary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block w-8 h-8 stroke-current"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+            </div>
+            <div class="stat-title">Page Views</div>
+            <div class="stat-value text-pink-700">2.6M</div>
+            <div class="stat-desc">21% more than last month</div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-figure text-pink-700	">
+              <div class="avatar online">
+                <div class="w-16 rounded-full">
+                  <img src="https://api.lorem.space/image/face?w=128&h=128" />
+                </div>
+              </div>
+            </div>
+            <div class="stat-value">86%</div>
+            <div class="stat-title">Tasks done</div>
+            <div class="stat-desc text-pink-700	">31 tasks remaining</div>
+          </div>
+        </div>
+        <div class="card-body w-1/4">
+          <p>
+            <h2 className="font-bold text-xl">Our Mission</h2> <br />{" "}
+            Part-T-ake. offers superior on-site computer parts sitting and
+            exercising services for your computer, providing the good service
+            and machanic . Our team will ensure that best parts and desing for
+            your computer. <br /> <br />
+            <h2 className="font-bold text-xl">Our Services</h2> <br />
+            Ensure best parst and service. <br /> Providing the home delivery
+            service.
+          </p>
+        </div>
       </div>
     </div>
   );
