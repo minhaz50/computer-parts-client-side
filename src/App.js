@@ -6,7 +6,7 @@ import Navbar from "./Pages/Shared/Navbar";
 
 function App() {
   return (
-    <div className="App">
+    <div className="bg-neutral">
       <Navbar></Navbar>
       <Routes>
         <Route path="/home" element={<Home />}>

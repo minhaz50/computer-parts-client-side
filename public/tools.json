@@ -1,0 +1,51 @@
+[
+  {
+    "_id": 1,
+    "name": "Motherboard",
+    "image": "https://cdn.pixabay.com/photo/2020/07/23/15/34/mother-board-5431664_960_720.jpg",
+    "description": "The motherboard is the backbone that ties the computer's components together at one spot and allows them to talk to each other. Without it, none of the computer pieces, such as the CPU, GPU, or hard drive, could interact. Total motherboard functionality is necessary for a computer to work well.",
+    "price": 1000
+  },
+  {
+    "_id": 2,
+    "name": "Random access memory(Ram)",
+    "image": "https://cdn.pixabay.com/photo/2020/02/22/08/40/memories-4869868_960_720.jpg",
+    "description": "RAM, in full random-access memory, computer main memory in which specific contents can be accessed (read or written) directly by the central processing unit in a very short time regardless of the sequence (and hence location) in which they were recorded.",
+    "price": 200
+  },
+  {
+    "_id": 3,
+    "name": "Keyboard",
+    "image": "https://cdn.pixabay.com/photo/2018/04/16/10/26/computer-3324200_960_720.jpg",
+    "description": "A keyboard is a peripheral device that enables a user to input text into a computer or any other electronic machinery. A keyboard is an input device and is the most basic way for the user to communicate with a computer.",
+    "price": 100
+  },
+  {
+    "_id": 4,
+    "name": "Hard Disk",
+    "image": "https://cdn.pixabay.com/photo/2020/05/12/08/55/hard-drive-5161898_960_720.jpg",
+    "description": "hard disk, also called hard disk drive or hard drive, magnetic storage medium for a computer. Hard disks are flat circular plates made of aluminum or glass and coated with a magnetic material.",
+    "price": 300
+  },
+  {
+    "_id": 5,
+    "name": "Computer Coller Fan",
+    "image": "https://cdn.pixabay.com/photo/2015/09/09/22/05/cooler-933691__340.jpg",
+    "description": "CPU fan - a fan on top of a computer processor. It helps pull and blow hot air off the processor, helping keep it cooler. Power supply fan - a fan located inside a power supply. The power supply fan blows hotter air out of the power supply and out of the computer.",
+    "price": 200
+  },
+  {
+    "_id": 6,
+    "name": "Computer Coller Fan",
+    "image": "https://cdn.pixabay.com/photo/2015/09/09/22/05/cooler-933691__340.jpg",
+    "description": "CPU fan - a fan on top of a computer processor. It helps pull and blow hot air off the processor, helping keep it cooler. Power supply fan - a fan located inside a power supply. The power supply fan blows hotter air out of the power supply and out of the computer.",
+    "price": 200
+  },
+  {
+    "_id": 7,
+    "name": "Computer Coller Fan",
+    "image": "https://cdn.pixabay.com/photo/2015/09/09/22/05/cooler-933691__340.jpg",
+    "description": "CPU fan - a fan on top of a computer processor. It helps pull and blow hot air off the processor, helping keep it cooler. Power supply fan - a fan located inside a power supply. The power supply fan blows hotter air out of the power supply and out of the computer.",
+    "price": 200
+  }
+]
