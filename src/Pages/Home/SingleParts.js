@@ -1,8 +1,8 @@
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Button, Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const SingleParts = ({ part }) => {
   const { _id, name, image, description, price } = part;
@@ -19,10 +19,10 @@ const SingleParts = ({ part }) => {
           <Link to={`/purchase/${_id}`}>
             <Button variant="danger" className="ms-5 mt-3">
               Purchase Now{" "}
-              {/* <FontAwesomeIcon
+              <FontAwesomeIcon
                 className="ms-2 text-white"
                 icon={faShoppingCart}
-              /> */}
+              />
             </Button>
           </Link>
         </Card.Body>
