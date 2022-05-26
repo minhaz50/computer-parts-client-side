@@ -36,16 +36,16 @@
   },
   {
     "_id": 6,
-    "name": "Computer Coller Fan",
-    "image": "https://cdn.pixabay.com/photo/2015/09/09/22/05/cooler-933691__340.jpg",
-    "description": "CPU fan - a fan on top of a computer processor. It helps pull and blow hot air off the processor, helping keep it cooler. Power supply fan - a fan located inside a power supply. The power supply fan blows hotter air out of the power supply and out of the computer.",
+    "name": "Mouse",
+    "image": "https://cdn.pixabay.com/photo/2017/05/24/21/33/workplace-2341642_960_720.jpg",
+    "description": "Mouse is a pointing device which uses optical sensors to measure the movement of your hand to the respective monitor.",
     "price": 200
   },
   {
     "_id": 7,
-    "name": "Computer Coller Fan",
-    "image": "https://cdn.pixabay.com/photo/2015/09/09/22/05/cooler-933691__340.jpg",
-    "description": "CPU fan - a fan on top of a computer processor. It helps pull and blow hot air off the processor, helping keep it cooler. Power supply fan - a fan located inside a power supply. The power supply fan blows hotter air out of the power supply and out of the computer.",
-    "price": 200
+    "name": "Monitor",
+    "image": "https://cdn.pixabay.com/photo/2016/11/29/08/41/apple-1868496_960_720.jpg",
+    "description": "A monitor is an electronic visual computer display that includes a screen, circuitry and the case in which that circuitry is enclosed. Older computer monitors made use of cathode ray tubes (CRT), which made them large, heavy and inefficient",
+    "price": 700
   }
 ]
