@@ -2,12 +2,12 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./Pages/About/About";
 import Home from "./Pages/Home/Home";
-import Navigation from "./Pages/Shared/Navigation";
+import Navbar from "./Pages/Shared/Navbar";
 
 function App() {
   return (
     <div className="bg-neutral">
-      <Navigation></Navigation>
+      <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />}>
           Home
