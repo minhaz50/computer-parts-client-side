@@ -5,18 +5,18 @@ import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import auth from "../../firebase.init";
 
-const Purchase = ({ part }) => {
-  const { user } = useAuthState(auth);
-  const [product, setProduct] = useState({});
+const Purchase = () => {
+  const [user] = useAuthState(auth);
+  const [product, setProduct] = useState([]);
   const { orderId } = useParams();
   const { register, handleSubmit, reset } = useForm();
 
-  console.log(user.email);
+  console.log(user?.email);
   const onSubmit = (data) => {
     console.log(data);
     console.log("form submitted");
     axios
-      .post("http://localhost:5000//orders", {
+      .post("http://localhost:5000/orders", {
         ...data,
         status: "pending",
       })
@@ -30,7 +30,7 @@ const Purchase = ({ part }) => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000//products/${orderId}`)
+    fetch(`http://localhost:5000/products/${orderId}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [orderId]);
@@ -44,7 +44,7 @@ const Purchase = ({ part }) => {
               <div className="row g-0">
                 <div className="col-md-2">
                   <img
-                    src={product?.img}
+                    src={product?.image}
                     className="img-fluid rounded-start"
                     alt="..."
                   />
@@ -52,7 +52,7 @@ const Purchase = ({ part }) => {
                 <div className="col-md-10">
                   <div className="card-body">
                     <h6 className="card-title border-bottom pb-3">
-                      {product?.productName}
+                      {product?.name}
                     </h6>
                     <small className="card-text">{product?.description}</small>
                     <br />
@@ -65,7 +65,7 @@ const Purchase = ({ part }) => {
             </div>
           </div>
           <div className="col-md-6 px-5">
-            <h1 className="text-dark fw-bold text-center  mb-4">
+            <h1 className="text-white fw-bold text-center   mb-4">
               Place an order
             </h1>
             <hr className="w-50 m-auto mb-5" />
@@ -94,7 +94,7 @@ const Purchase = ({ part }) => {
                   className="form-control"
                   placeholder="service name"
                   type="text"
-                  value={product?.productName}
+                  value={product?.name}
                   {...register("productName", { required: true })}
                 />
               </div>
@@ -113,7 +113,7 @@ const Purchase = ({ part }) => {
                   className="form-control"
                   placeholder="image url"
                   type="text"
-                  value={product?.img}
+                  value={product?.image}
                   {...register("imgURL", { required: true })}
                 />
               </div>

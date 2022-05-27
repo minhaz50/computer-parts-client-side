@@ -22,6 +22,11 @@ const Navbar = () => {
       <li>
         <Link to="/about">About</Link>
       </li>
+      {user && (
+        <li>
+          <Link to="/dashboard">Dashboard</Link>
+        </li>
+      )}
       <li>
         {user ? (
           <button className="btn btn-primary bg-orange-400" onClick={logout}>
@@ -66,6 +71,9 @@ const Navbar = () => {
         >
           <Link to="/">Par-T-ake</Link>
         </a>
+        <Link to="/allproduct" className="text-white">
+          Explore Products
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0 text-white uppercase text-sm">

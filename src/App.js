@@ -7,6 +7,10 @@ import Login from "./Pages/Login/Login";
 import SingUp from "./Pages/Login/SingUp";
 import RequireAuth from "./Pages/Login/RequireAuth";
 import Purchase from "./Pages/Purchase/Purchase";
+import ExploreProduct from "./Pages/ExploreProduct/ExploreProduct";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import MyOrders from "./Pages/Dashboard/MyOrders";
+import Reviews from "./Pages/Dashboard/Reviews";
 
 function App() {
   return (
@@ -29,6 +33,21 @@ function App() {
               <Purchase></Purchase>
             </RequireAuth>
           }
+        ></Route>
+        <Route
+          path="/dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard></Dashboard>
+            </RequireAuth>
+          }
+        >
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path="review" element={<Reviews></Reviews>}></Route>
+        </Route>
+        <Route
+          path="/allproduct"
+          element={<ExploreProduct></ExploreProduct>}
         ></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/singup" element={<SingUp></SingUp>}></Route>

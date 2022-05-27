@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
-import SingleParts from "./SingleParts";
+import SingleParts from "../Home/SingleParts";
 
-const Parts = () => {
+const ExploreProduct = () => {
   const [parts, setParts] = useState([]);
 
   useEffect(() => {
@@ -11,7 +11,6 @@ const Parts = () => {
       .then((data) => setParts(data));
   }, []);
 
-  //   const slicedParts = parts.slice(0, 3);
   return (
     <Container className="bg-neutral">
       <h1 className="text-white fw-bold text-center mt-11 mb-4 text-5xl ">
@@ -19,7 +18,7 @@ const Parts = () => {
       </h1>
       <hr className="w-50 m-auto mb-5" />
       <Row xs={1} md={3} className="g-4">
-        {parts.slice(0, 6).map((part) => (
+        {parts.map((part) => (
           <SingleParts key={part._key} part={part}></SingleParts>
         ))}
       </Row>
@@ -27,4 +26,4 @@ const Parts = () => {
   );
 };
 
-export default Parts;
+export default ExploreProduct;
