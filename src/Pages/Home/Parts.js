@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
+import Loading from "../Shared/Loading";
 import SingleParts from "./SingleParts";
 
 const Parts = () => {
@@ -10,6 +11,7 @@ const Parts = () => {
       .then((res) => res.json())
       .then((data) => setParts(data));
   }, []);
+  <Loading></Loading>;
 
   //   const slicedParts = parts.slice(0, 3);
   return (

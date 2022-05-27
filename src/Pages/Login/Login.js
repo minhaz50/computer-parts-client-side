@@ -4,7 +4,7 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../Shared/Loading";
 
@@ -19,6 +19,10 @@ const Login = () => {
   } = useForm();
 
   let singInError;
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  let from = location.state?.from?.pathname || "/";
 
   if (loading || gLoading) {
     return <Loading></Loading>;
@@ -32,6 +36,10 @@ const Login = () => {
     );
   }
 
+  if (user || gUser) {
+    navigate(from, { replace: true });
+  }
+
   const onSubmit = (data) => {
     console.log(data);
     signInWithEmailAndPassword(data.email, data.password);
@@ -42,7 +50,7 @@ const Login = () => {
         <div class="card-body">
           <h2 className="text-5xl font-semibold text-center">Login</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="form-control w-full max-w-xs">
+            <div className="form-control w-full max-w-xs mt-3">
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
@@ -74,7 +82,7 @@ const Login = () => {
                 )}
               </label>
             </div>
-            <div className="form-control w-full max-w-xs">
+            <div className="form-control w-full max-w-xs mt-3">
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
@@ -108,7 +116,7 @@ const Login = () => {
             </div>
             {singInError}
             <input
-              className="btn w-full max-w-xs text-white text-xl"
+              className="btn w-full max-w-xs text-white text-xl mt-3"
               type="submit"
               value="Login"
             />
@@ -116,7 +124,7 @@ const Login = () => {
           <p>
             <small>
               New to Par-T-ake?{" "}
-              <Link className="text-secondary" to="/singup">
+              <Link className="text-primary" to="/singup">
                 create a new account
               </Link>
             </small>

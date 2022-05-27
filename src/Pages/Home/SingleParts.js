@@ -2,10 +2,19 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Button, Card, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SingleParts = ({ part }) => {
   const { _id, name, image, description, price } = part;
+  const navigate = useNavigate();
+
+  // const navigateDetails = (id) => {
+  //   navigate(`/inventory/${id}`);
+  // };
+  const navigateCheckout = (serviceId) => {
+    navigate(`/order/${serviceId}`);
+  };
+
   return (
     <Col>
       <Card>
@@ -17,8 +26,12 @@ const SingleParts = ({ part }) => {
           </Card.Text>
           <small className="text-danger  mx-4">$ {price}</small>
           <Link to={`/purchase/${_id}`}>
-            <Button variant="danger" className="ms-5 mt-3">
-              Purchase Now{" "}
+            <Button
+              variant="danger"
+              onClick={() => navigateCheckout(_id)}
+              className="ms-5 mt-3"
+            >
+              <Link to="/purchase">Purchase Now</Link>
               <FontAwesomeIcon
                 className="ms-2 text-white"
                 icon={faShoppingCart}
