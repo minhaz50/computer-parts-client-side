@@ -10,7 +10,7 @@ import Purchase from "./Pages/Purchase/Purchase";
 import ExploreProduct from "./Pages/ExploreProduct/ExploreProduct";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import MyOrders from "./Pages/Dashboard/MyOrders";
-import Reviews from "./Pages/Dashboard/Reviews";
+import Reviews from "./Pages/Dashboard/AddReviews";
 
 function App() {
   return (

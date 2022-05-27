@@ -4,7 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import auth from "../../firebase.init";
 
-const Reviews = () => {
+const AddReviews = () => {
   const { register, handleSubmit, reset } = useForm();
   const [user] = useAuthState(auth);
   const onSubmit = (data) => {
@@ -78,4 +78,4 @@ const Reviews = () => {
   );
 };
 
-export default Reviews;
+export default AddReviews;
