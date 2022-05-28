@@ -13,6 +13,8 @@ import MyOrders from "./Pages/Dashboard/MyOrders";
 import Reviews from "./Pages/Dashboard/AddReviews";
 import Blogs from "./Pages/Blogs/Blogs";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
+import MyProfile from "./Pages/MyProfile/MyProfile";
+import NotFound from "./Pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -52,9 +54,11 @@ function App() {
           path="/allproduct"
           element={<ExploreProduct></ExploreProduct>}
         ></Route>
+        <Route path="/profile" element={<MyProfile></MyProfile>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/singup" element={<SingUp></SingUp>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );
