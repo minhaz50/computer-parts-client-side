@@ -12,7 +12,7 @@ const Reviews = () => {
   }, []);
   return (
     <Container>
-      <h1 className="text-white fw-bold text-center mt-5 mb-4">
+      <h1 className="text-white text-5xl     fw-bold text-center mt-5 mb-4">
         Our Client Reviews
       </h1>
       <hr className="w-50 m-auto mb-5" />
