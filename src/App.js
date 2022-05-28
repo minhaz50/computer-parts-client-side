@@ -11,6 +11,7 @@ import ExploreProduct from "./Pages/ExploreProduct/ExploreProduct";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import MyOrders from "./Pages/Dashboard/MyOrders";
 import Reviews from "./Pages/Dashboard/AddReviews";
+import Blogs from "./Pages/Blogs/Blogs";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
           path="/allproduct"
           element={<ExploreProduct></ExploreProduct>}
         ></Route>
+        <Route path="/blog" element={<Blogs></Blogs>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/singup" element={<SingUp></SingUp>}></Route>
       </Routes>
