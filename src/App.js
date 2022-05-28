@@ -52,7 +52,7 @@ function App() {
           path="/allproduct"
           element={<ExploreProduct></ExploreProduct>}
         ></Route>
-        <Route path="/blog" element={<Blogs></Blogs>}></Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/singup" element={<SingUp></SingUp>}></Route>
       </Routes>
