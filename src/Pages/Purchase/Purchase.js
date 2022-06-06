@@ -16,7 +16,7 @@ const Purchase = () => {
     console.log(data);
     console.log("form submitted");
     axios
-      .post("http://localhost:5000/orders", {
+      .post("https://nameless-thicket-75744.herokuapp.com/orders", {
         ...data,
         status: "pending",
       })
@@ -30,7 +30,7 @@ const Purchase = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${orderId}`)
+    fetch(`https://nameless-thicket-75744.herokuapp.com/products/${orderId}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [orderId]);

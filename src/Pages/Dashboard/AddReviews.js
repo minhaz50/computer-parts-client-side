@@ -9,12 +9,14 @@ const AddReviews = () => {
   const [user] = useAuthState(auth);
   const onSubmit = (data) => {
     console.log("form submitted");
-    axios.post("http://localhost:5000/reviews", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("Add review successfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://nameless-thicket-75744.herokuapp.com/reviews", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Add review successfully");
+          reset();
+        }
+      });
   };
   return (
     <div className="container ">

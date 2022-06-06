@@ -12,7 +12,7 @@ const MyOrders = () => {
   console.log(user.email);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders/${user.email}`)
+    fetch(`https://nameless-thicket-75744.herokuapp.com/orders/${user.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [user.email]);
@@ -20,7 +20,7 @@ const MyOrders = () => {
   console.log(orders);
 
   const handleDeleteOrder = (id) => {
-    const url = `http://localhost:5000/orders/${id}`;
+    const url = `https://nameless-thicket-75744.herokuapp.com/orders/${id}`;
 
     if (window.confirm("Are you sure to delete this order?")) {
       fetch(url, {

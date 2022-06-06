@@ -4,7 +4,7 @@ const useServiceDetails = (serviceId) => {
   const [services, setService] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/products/${serviceId}`;
+    const url = `https://nameless-thicket-75744.herokuapp.com/products/${serviceId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setService(data));

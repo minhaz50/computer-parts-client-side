@@ -19,6 +19,7 @@ import NotFound from "./Pages/NotFound/NotFound";
 function App() {
   return (
     <div className="bg-neutral">
+      {/* set navbar  */}
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />}>
